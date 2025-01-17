@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Chakra_Petch, Pacifico } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const chakraPetch = Chakra_Petch({
+  variable: "--font-chakra-petch",
+  subsets: ["latin", "vietnamese"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const pacifico = Pacifico({
+  variable: "--font-pacifico",
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${chakraPetch.variable} ${pacifico.variable} antialiased`}
       >
+        <Toaster />
         {children}
       </body>
     </html>
