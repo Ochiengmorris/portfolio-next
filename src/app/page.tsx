@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex justify-center max-w-7xl mx-auto h-screen overflow-y-hidden">
       <HomeImageHolder />
       <MainComponent />
-      <div className="hidden xl:inline-block mt-[84px]">
+      <div className="hidden ml-1 xl:inline-block mt-[84px]">
         <HeaderLinks mediaClasses="flex flex-col bg-muted" />
       </div>
     </div>
