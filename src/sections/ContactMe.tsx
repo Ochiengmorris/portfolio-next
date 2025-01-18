@@ -25,7 +25,9 @@ const ContactMe = () => {
         transition={{ duration: 0.6 }}
         className="py-4 mb-2 shadow-md px-6 bg-card"
       >
-        <h2 className="lg:text-4xl text-2xl font-semibold mb-8">ContactMe</h2>
+        <h2 className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8">
+          ContactMe
+        </h2>
 
         <div className="lg:mx-12">
           <div className="flex list-none gap-8 mb-6">

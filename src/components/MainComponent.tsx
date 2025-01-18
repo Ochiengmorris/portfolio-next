@@ -29,7 +29,9 @@ const MainComponent = () => {
       <WorkExp />
 
       <div className="px-6 py-4 mb-2 shadow-md bg-card" id="interests">
-        <h2 className="lg:text-4xl text-2xl font-semibold mb-8">INTERESTS</h2>
+        <h2 className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8">
+          INTERESTS
+        </h2>
 
         <Interests />
       </div>
