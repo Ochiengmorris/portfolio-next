@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -11,9 +11,28 @@ import {
 } from "@/components/ui/sheet";
 
 const Header = () => {
-  const [showSidebar, setShowSidebar] = React.useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector("#scroll-container");
+    if (!scrollContainer) return;
+
+    const handleScroll = () => {
+      setIsScrolled(scrollContainer.scrollTop > 20);
+    };
+
+    scrollContainer.addEventListener("scroll", handleScroll);
+
+    return () => {
+      scrollContainer.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="border-b border-gray-700/20">
+    <section
+      className={`border-b border-gray-700/40 sticky top-0 z-10 transition-colors duration-150 ${isScrolled ? "bg-card shadow-md" : ""}`}
+    >
       <nav className="py-6 px-5 flex justify-between items-center">
         <h2 className="font-pacifico text-xl lg:text-3xl">mjonline.co.ke</h2>
 

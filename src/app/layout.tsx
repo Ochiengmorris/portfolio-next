@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${chakraPetch.variable} ${pacifico.variable} antialiased`}
+        className={`${chakraPetch.variable} ${pacifico.variable} antialiased lg:bg-gray-800/20`}
       >
         <Toaster />
         {children}

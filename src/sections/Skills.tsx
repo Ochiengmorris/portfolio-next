@@ -1,16 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import CircleProgressBar from "@/components/CircleProgressBar";
 import LanguageProficiency from "@/components/LanguageProficiency";
 import SkillProgressBar from "@/components/SkillProgressBar";
 import { CheckCircle } from "lucide-react";
-import React from "react";
 
 const Skills = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
-    <section>
-      <div className="bg-card shadow-md p-6 text-card-foreground mt-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section
+      ref={ref}
+      id="skills"
+      className="bg-card shadow-md p-6 text-card-foreground mt-2 "
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         <div className="">
           <h2 className="text-xl mb-4">Personal Information</h2>
-          <div className="grid grid-cols-3 text-sm">
+          <motion.div className="grid grid-cols-3 text-sm">
             <ul className="font-bold space-y-3">
               <li>FULL NAME</li>
               <li>D.O.B</li>
@@ -25,10 +42,10 @@ const Skills = () => {
               <li>oduyajohn66@gmail.com</li>
               <li>+254 742 642356</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        <div>
+        <motion.div>
           <h2 className="text-xl md:mt-0 mb-4">Languages</h2>
           <ul>
             <LanguageProficiency
@@ -50,7 +67,7 @@ const Skills = () => {
               proficiency="native"
             />
           </ul>
-        </div>
+        </motion.div>
 
         <div>
           <h2 className="text-xl mb-4">Professional Skills</h2>
@@ -118,7 +135,7 @@ const Skills = () => {
             unique.
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
