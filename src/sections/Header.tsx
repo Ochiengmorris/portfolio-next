@@ -19,7 +19,7 @@ const Header = () => {
     if (!scrollContainer) return;
 
     const handleScroll = () => {
-      setIsScrolled(scrollContainer.scrollTop > 20);
+      setIsScrolled(scrollContainer.scrollTop > 10);
     };
 
     scrollContainer.addEventListener("scroll", handleScroll);
@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <section
-      className={`border-b border-gray-700/40 sticky top-0 z-10 transition-colors duration-150 ${isScrolled ? "bg-card shadow-md" : ""}`}
+      className={`border-b border-gray-700/40 sticky top-0 z-10 transition-colors duration-150 ${isScrolled ? "bg-card shadow" : ""}`}
     >
       <nav className="py-6 px-5 flex justify-between items-center">
         <h2 className="font-pacifico text-xl lg:text-3xl">mjonline.co.ke</h2>
