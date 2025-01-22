@@ -39,13 +39,7 @@ const Header = () => {
         <div>
           <ul className="list-none gap-2 font-semibold items-center justify-center lg:text-lg text-base hidden md:flex">
             <Link href="/" className="hover:underline cursor-pointer">
-              HOME
-            </Link>
-            <Link href="/about" className="hover:underline cursor-pointer">
-              ABOUT
-            </Link>
-            <Link href="/contact" className="hover:underline cursor-pointer">
-              CONTACT
+              HIRE ME
             </Link>
           </ul>
 

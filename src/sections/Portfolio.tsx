@@ -75,6 +75,7 @@ const Portfolio = () => {
                 </div>
                 <a
                   href={project.link}
+                  target="_blank"
                   className="inline-block mt-4 text-[#00a184] hover:underline text-xs md:text-sm "
                 >
                   Live Demo →
