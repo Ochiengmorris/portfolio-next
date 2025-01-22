@@ -11,7 +11,7 @@ const projects = [
     description:
       "A modern event ticketing platform with features like ticket search, filtering, and secure payments with Mpesa.",
     image: "/image1.png",
-    link: "/ecommerce-demo",
+    link: "https://mj-ticketr.vercel.app/",
     techStack: ["NextJS", "Tailwind", "Convex"],
   },
   {
@@ -77,7 +77,7 @@ const Portfolio = () => {
                   href={project.link}
                   className="inline-block mt-4 text-[#00a184] hover:underline text-xs md:text-sm "
                 >
-                  View Project →
+                  Live Demo →
                 </a>
               </div>
             </div>
