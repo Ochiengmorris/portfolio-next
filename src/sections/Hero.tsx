@@ -35,14 +35,12 @@ const Hero = () => {
         className="text-sm md:text-lg lg:text-xl text-gray-600"
       >
         {" "}
-        I&apos;m John Ochieng&apos; Oduya, a <b>
-          Full-Stack Developer
-        </b> and <b>Statistician</b> with <b>2+ years</b> of experience in
-        crafting scalable, user-centric solutions. Skilled in{" "}
-        <b>Python, JavaScript (React & Node.js)</b>, <b>React Native</b>, and{" "}
-        <b>R</b>, I combine software development expertise with statistical
-        analysis to create data-driven, functional, and engaging digital
-        experiences.{" "}
+        A <b>Full-Stack Developer</b> and <b>Statistician</b> with{" "}
+        <b>2+ years</b> of experience in crafting scalable, user-centric
+        solutions. Skilled in <b>Python, JavaScript (React & Node.js)</b>,{" "}
+        <b>React Native</b>, and <b>R</b>, I combine software development
+        expertise with statistical analysis to create data-driven, functional,
+        and engaging digital experiences.{" "}
       </motion.p>
     </section>
   );
