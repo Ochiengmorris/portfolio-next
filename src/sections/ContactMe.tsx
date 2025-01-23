@@ -42,17 +42,17 @@ const ContactMe = () => {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://linkedin.com/in/johnochieng">
                 <Linkedin size={24} />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://x.com/oduyajohn66">
                 <TwitterIcon size={24} />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://github.com/Ochiengmorris">
                 <Github size={24} />
               </a>
             </li>

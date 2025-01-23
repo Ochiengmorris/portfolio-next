@@ -1,5 +1,6 @@
 "use client";
 
+import Educationlist from "@/components/Educationlist";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -30,11 +31,12 @@ const WorkExp = () => {
 
         {/* Education */}
         <h2
-          className="lg:text-3xl md:text-center text-2xl font-semibold mb-8"
+          className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8"
           id="education"
         >
           Education
         </h2>
+        <Educationlist />
       </motion.div>
     </section>
   );
