@@ -7,21 +7,39 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "Ticket marketplace - Umoja",
+    title: "UmojaTickets - Ticket Marketplace",
     description:
-      "A modern event ticketing platform with features like ticket search, filtering, and secure payments with Mpesa.",
+      "A cutting-edge event ticketing platform featuring advanced ticket search, filtering, and secure payments with Mpesa. Designed to connect event organizers and attendees seamlessly.",
     image: "/image1.png",
     link: "https://mj-ticketr.vercel.app/",
-    techStack: ["NextJS", "Tailwind", "Convex"],
+    techStack: ["Next.js", "Tailwind CSS", "Convex"],
   },
   {
     id: 2,
-    title: "Ecommerce Mobile App",
+    title: "E-Commerce Platform",
     description:
-      "A Shopping app where customers can search for products, add to their cart, and checkout securely with stripe and mpesa.",
+      "A modern e-commerce platform with features like product search, filtering, and secure payments.",
+    image: "/image2.png",
+    link: "/ecommerce-demo",
+    techStack: ["React", "Tailwind CSS", "Node.js"],
+  },
+  {
+    id: 3,
+    title: "Pesapp - Mobile Money App",
+    description:
+      "A feature-rich mobile money application enabling seamless real-time transactions. Includes secure user authentication, transaction history tracking, and detailed balance management. Built with a modern interface to provide a smooth and intuitive user experience.",
+    image: "/image2.png",
+    link: "/pesapp-demo",
+    techStack: ["React Native", "Node.js", "MongoDB", "Expo"],
+  },
+  {
+    id: 4,
+    title: "LukuHub - Shopping App",
+    description:
+      "An intuitive shopping app where users can browse products, add items to their cart, and checkout securely Mpesa. Built for a seamless e-commerce experience. Also has an Admin page for event owners to add, modify, and delete products. Built for a seamless e-commerce experience.",
     image: "/image2.png",
     link: "/chat-app-demo",
-    techStack: ["React Native", "Supabase", "NextJS"],
+    techStack: ["React Native", "Supabase", "Next.js", "Expo"],
   },
 ];
 

@@ -40,9 +40,9 @@ const Hero = () => {
         </b> and <b>Statistician</b> with <b>2+ years</b> of experience in
         crafting scalable, user-centric solutions. Skilled in{" "}
         <b>Python, JavaScript (React & Node.js)</b>, <b>React Native</b>, and{" "}
-        <b>Flutter</b>, I combine software development expertise with
-        statistical analysis to create data-driven, functional, and engaging
-        digital experiences.{" "}
+        <b>R</b>, I combine software development expertise with statistical
+        analysis to create data-driven, functional, and engaging digital
+        experiences.{" "}
       </motion.p>
     </section>
   );

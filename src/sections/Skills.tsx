@@ -38,7 +38,7 @@ const Skills = () => {
             <ul className="space-y-3 col-span-2">
               <li>John Oduya</li>
               <li>April 2003</li>
-              <li>Mombasa, Kenya</li>
+              <li>Nairobi, Kenya</li>
               <li>oduyajohn66@gmail.com</li>
               <li>+254 742 642356</li>
             </ul>
