@@ -16,12 +16,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "E-Commerce Platform",
+    title: "LukuHub - Admin Dashboard",
     description:
-      "A modern e-commerce platform with features like product search, filtering, and secure payments.",
-    image: "/image2.png",
+      "An admin dashboard for managing the LukuHub e-commerce platform. Features include product management, order tracking, and insightful analytics, all wrapped in a sleek, user-friendly interface.",
+    image: "/luku-dash.png",
     link: "/ecommerce-demo",
-    techStack: ["React", "Tailwind CSS", "Node.js"],
+    techStack: ["NextJS", "Tailwind CSS", "Supabase"],
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
       "A feature-rich mobile money application enabling seamless real-time transactions. Includes secure user authentication, transaction history tracking, and detailed balance management. Built with a modern interface to provide a smooth and intuitive user experience.",
     image: "/image2.png",
     link: "/pesapp-demo",
-    techStack: ["React Native", "Node.js", "MongoDB", "Expo"],
+    techStack: ["React Native", "Node.js", "Expo"],
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const projects = [
       "An intuitive shopping app where users can browse products, add items to their cart, and checkout securely Mpesa. Built for a seamless e-commerce experience. Also has an Admin page for event owners to add, modify, and delete products. Built for a seamless e-commerce experience.",
     image: "/image2.png",
     link: "/chat-app-demo",
-    techStack: ["React Native", "Supabase", "Next.js", "Expo"],
+    techStack: ["React Native", "Nativewind", "Expo"],
   },
 ];
 
