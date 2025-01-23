@@ -35,7 +35,7 @@ const Hero = () => {
         className="text-sm md:text-lg lg:text-xl text-gray-600"
       >
         {" "}
-        A <b>Full-Stack Developer</b> and <b>Statistician</b> with{" "}
+        A <b>Full-Stack Web Developer</b> and <b>Statistician</b> with{" "}
         <b>2+ years</b> of experience in crafting scalable, user-centric
         solutions. Skilled in <b>Python, JavaScript (React & Node.js)</b>,{" "}
         <b>React Native</b>, and <b>R</b>, I combine software development

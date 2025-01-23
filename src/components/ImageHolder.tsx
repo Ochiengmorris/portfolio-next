@@ -23,7 +23,7 @@ const ImageHolder = ({ imageClassses }: { imageClassses: string }) => {
           JOHN OCHIENG&apos; ODUYA
         </h3>
         <p className="text-xs lg:text-sm lg:tracking-wider">
-          FullStack Developer / Statistician
+          FullStack Web Developer / Statistician
         </p>
       </div>
 
