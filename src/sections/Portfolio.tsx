@@ -28,7 +28,7 @@ const projects = [
     title: "Pesapp - Mobile Money App",
     description:
       "A feature-rich mobile money application enabling seamless real-time transactions. Includes secure user authentication, transaction history tracking, and detailed balance management. Built with a modern interface to provide a smooth and intuitive user experience.",
-    image: "/image2.png",
+    image: "/image3.png",
     link: "/pesapp-demo",
     techStack: ["React Native", "Node.js", "Expo"],
   },
@@ -37,7 +37,7 @@ const projects = [
     title: "LukuHub - Shopping App",
     description:
       "An intuitive shopping app where users can browse products, add items to their cart, and checkout securely Mpesa. Built for a seamless e-commerce experience. Also has an Admin page for event owners to add, modify, and delete products. Built for a seamless e-commerce experience.",
-    image: "/image2.png",
+    image: "/image4.png",
     link: "/chat-app-demo",
     techStack: ["React Native", "Nativewind", "Expo"],
   },
