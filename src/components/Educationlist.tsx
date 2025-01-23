@@ -12,9 +12,9 @@ const Educationlist = () => {
       </div> */}
 
       <div className="absolute border top-[12.5%] lg:left-1/4 left-1/4 -translate-x-[37.5%] lg:-translate-x-2/4 bg-card shadow-md rounded-xl p-4 justify-center flex flex-col items-start">
-        <p className="text-muted-foreground text-xs">2021 - 2024</p>
-        <p>Moi University</p>
-        <h2 className="font-semibold text-xs gap-1">Bsc Statistics</h2>
+        <p className="text-muted-foreground text-xs">2015 - 2019</p>
+        <p>Nyambaria HighSchool</p>
+        <h2 className="font-semibold text-xs gap-1">Secondary School </h2>
       </div>
 
       <div className="absolute top-[25%] lg:left-1/2  lg:-translate-x-1/2 -translate-x-1  rounded-full p-4 justify-center flex flex-col items-end">
