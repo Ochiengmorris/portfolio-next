@@ -66,13 +66,15 @@ const Portfolio = () => {
               className="bg-white shadow-md rounded-lg overflow-hidden"
               key={project.id}
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative w-full h-48">
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
 
               <div className="p-6">
                 <h3 className="text-sm md:text-lg font-semibold">
