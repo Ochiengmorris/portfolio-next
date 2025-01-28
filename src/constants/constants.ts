@@ -121,7 +121,7 @@ const projects = [
         color: "text-muted-foreground",
       },
     ],
-    image: "./image1.png",
+    image: "/image1.png",
     source_code_link: "https://github.com/Ochiengmorris/umojatickets",
   },
   {
@@ -142,7 +142,7 @@ const projects = [
         color: "text-muted-foreground",
       },
     ],
-    image: "./image4.png",
+    image: "/image4.png",
     source_code_link: "https://github.com/Ochiengmorris/lukuhub-admin",
   },
   {
@@ -163,7 +163,7 @@ const projects = [
         color: "text-blue-500",
       },
     ],
-    image: "./image3.png",
+    image: "/image3.png",
     source_code_link: "https://github.com/Ochiengmorris/pesa-app-typescript",
   },
 ];

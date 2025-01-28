@@ -5,6 +5,7 @@ import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { styles } from "@/utils/styles";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import Tilt from "react-parallax-tilt";
 
@@ -39,12 +40,13 @@ const ProjectCard = ({
       <Tilt
         scale={1}
         transitionSpeed={450}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-[#050816] p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
-          <img
+          <Image
             src={image}
             alt="project_image"
+            fill
             className="w-full h-full object-cover rounded-2xl"
           />
 

@@ -5,6 +5,7 @@ import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { styles } from "@/utils/styles";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const FeedbackCard = ({
   index,
@@ -30,7 +31,7 @@ const FeedbackCard = ({
     })}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
-    <p className="text-white font-black text-[48px]">"</p>
+    <p className="text-white font-black text-[48px]">&quot;</p>
 
     <div className="mt-1">
       <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
@@ -45,9 +46,11 @@ const FeedbackCard = ({
           </p>
         </div>
 
-        <img
+        <Image
           src={image}
           alt={`feedback_by-${name}`}
+          width={40}
+          height={40}
           className="w-10 h-10 rounded-full object-cover"
         />
       </div>
