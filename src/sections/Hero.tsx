@@ -1,49 +1,32 @@
 "use client";
 
 import ImageHolder from "@/components/ImageHolder";
-import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { SectionWrapper } from "@/hoc";
 
 const Hero = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
-    <section
-      ref={ref}
-      id="home"
-      className="bg-card mt-2 text-card-foreground shadow-md p-6"
-    >
+    <section className="bg-transparent shadow-md text-card rounded-xl p-6">
       <div className="lg:hidden mb-12">
         <ImageHolder imageClassses={"w-[200px] h-[200px]"} />
       </div>
 
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="text-2xl lg:text-4xl font-bold mb-6 text-gray-800"
+      <h1
+        className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px]
+      lg:leading-[98px] mb-6"
       >
-        HI, I&apos;M JOHN
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-sm md:text-lg lg:text-xl text-gray-600"
-      >
+        HI, I&apos;M <span className="text-teal-500">JOHN</span>
+      </h1>
+      <p className="text-sm md:text-lg text-card/50 lg:text-xl">
         {" "}
         A <b>Full-Stack Web Developer</b> and <b>Statistician</b> with{" "}
         <b>2+ years</b> of experience in crafting scalable, user-centric
-        solutions. Skilled in <b>Python, JavaScript (React & Node.js)</b>,{" "}
-        <b>React Native</b>, and <b>R</b>, I combine software development
-        expertise with statistical analysis to create data-driven, functional,
-        and engaging digital experiences.{" "}
-      </motion.p>
+        solutions. Skilled in <b>Python, JavaScript (React & Node.js)</b>, and{" "}
+        <b>React Native</b>, I combine software development expertise with
+        statistical analysis to create data-driven, functional, and engaging
+        digital experiences.{" "}
+      </p>
     </section>
   );
 };
 
-export default Hero;
+export default SectionWrapper({ Component: Hero, idName: "hero" });

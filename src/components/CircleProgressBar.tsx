@@ -1,5 +1,3 @@
-import React from "react";
-
 const CircleProgressBar = ({
   progress,
   size,
@@ -40,7 +38,7 @@ const CircleProgressBar = ({
         dy=".3em"
         textAnchor="middle"
         fontSize="20px"
-        fill="black"
+        fill="white"
       >
         {progress}%
       </text>

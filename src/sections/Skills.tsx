@@ -1,31 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
-import CircleProgressBar from "@/components/CircleProgressBar";
 import LanguageProficiency from "@/components/LanguageProficiency";
-import SkillProgressBar from "@/components/SkillProgressBar";
-import { CheckCircle } from "lucide-react";
+import { SectionWrapper } from "@/hoc";
+import { textVariant } from "@/utils/motion";
+import { styles } from "@/utils/styles";
 
 const Skills = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
-    <section
-      ref={ref}
-      id="skills"
-      className="bg-card shadow-md p-6 text-card-foreground mt-2 "
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        <div className="">
+    <section className="bg-card/5 rounded-xl shadow-md p-6 ">
+      <motion.div variants={textVariant({ delay: 0 })}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>OVERVIEW.</h2>
+      </motion.div>
+      <motion.div className="grid text-card/50 grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="text-card/50">
           <h2 className="text-xl mb-4">Personal Information</h2>
           <motion.div className="grid grid-cols-3 text-sm">
             <ul className="font-bold space-y-3">
@@ -68,7 +58,7 @@ const Skills = () => {
             />
           </ul>
         </motion.div>
-
+        {/* 
         <div>
           <h2 className="text-xl mb-4">Professional Skills</h2>
           <ul>
@@ -77,9 +67,9 @@ const Skills = () => {
             <SkillProgressBar skill="Python" percentage={60} />
             <SkillProgressBar skill="NodeJS" percentage={60} />
           </ul>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <h2 className="text-xl md:mt-0 mb-4">Other Professional Skills</h2>
           <ul className="grid grid-cols-2">
             <li className="flex flex-col justify-center items-center">
@@ -99,9 +89,9 @@ const Skills = () => {
               <h3>C</h3>
             </li>
           </ul>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <h2 className="text-xl md:mt-0 mb-4">Few Things</h2>
           <ul className="">
             <li className="flex items-center gap-6 font-semibold">
@@ -125,19 +115,19 @@ const Skills = () => {
               <p>Strictly Following Rules</p>
             </li>
           </ul>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <h2 className="text-xl md:mt-0 mb-4">Understanding Client</h2>
           <p>
             Understanding the client need and Business is the key. Every Project
             is new in a way and every project is different and every client is
             unique.
           </p>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );
 };
 
-export default Skills;
+export default SectionWrapper({ Component: Skills, idName: "skills" });

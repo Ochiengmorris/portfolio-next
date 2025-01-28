@@ -1,45 +1,31 @@
 "use client";
 
-import Educationlist from "@/components/Educationlist";
+import { SectionWrapper } from "@/hoc";
+import { textVariant } from "@/utils/motion";
+import { styles } from "@/utils/styles";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const WorkExp = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
-    <section
-      ref={ref}
-      id="work-exp"
-      className="py-4 mb-2 shadow-md px-6 mt-2 rounded-xl bg-card"
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-      >
-        <h2
-          className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8"
-          id="work"
-        >
-          Work Experience
+    <section className="shadow-md rounded-xl p-6 bg-card/5">
+      <motion.div variants={textVariant({ delay: 0 })}>
+        <p className={`${styles.sectionSubText} text-center`}>
+          What I have done so far
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          Work Experience.
         </h2>
+      </motion.div>
 
-        <p className="text-center mb-8">Nothing to show here... yet!</p>
+      <motion.div>
+        <p className="text-center text-white mb-8">
+          Nothing to show here... yet!
+        </p>
 
         {/* Education */}
-        <h2
-          className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8"
-          id="education"
-        >
-          Education
-        </h2>
-        <Educationlist />
       </motion.div>
     </section>
   );
 };
 
-export default WorkExp;
+export default SectionWrapper({ Component: WorkExp, idName: "work-exp" });

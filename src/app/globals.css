@@ -102,7 +102,7 @@ body {
 .proficiency-label {
   margin-left: 10px; /* Spacing between dots and text label */
   font-size: 14px;
-  color: #555;
+  color: #fff;
 }
 
 .skill-progress-bar {
@@ -116,12 +116,12 @@ body {
 }
 
 .skill-name {
-  color: #333;
+  color: #fff;
 }
 
 .skill-percentage {
   font-size: 14px;
-  color: #333;
+  color: #fff;
 }
 
 .progress-bar {

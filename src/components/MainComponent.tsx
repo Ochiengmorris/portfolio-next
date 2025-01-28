@@ -1,46 +1,43 @@
+import ContactMe from "@/sections/ContactMe";
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
-import Skills from "@/sections/Skills";
-import WorkExp from "@/sections/WorkExp";
-import React from "react";
-import Interests from "./Interests";
-import Portfolio from "@/sections/Portfolio";
-import ContactMe from "@/sections/ContactMe";
 import MapComponent from "@/sections/MapComponent";
+import Portfolio from "@/sections/Portfolio";
+import Skills from "@/sections/Skills";
+import Testimonials from "@/sections/Testimonials";
+import WorkExp from "@/sections/WorkExp";
 import HeaderLinks from "./HeaderLinks";
 
 const MainComponent = () => {
   return (
     <div
-      className="overflow-y-auto px-1 mr-1 tracking-wider"
+      className="overflow-y-auto mr-1 relative tracking-wider"
       style={{ scrollbarWidth: "none" }}
       id="scroll-container"
     >
-      <Header />
-
-      <div className="xl:hidden">
-        <HeaderLinks mediaClasses="flex bg-muted" />
+      <div className="sticky top-0 z-20">
+        <Header />
       </div>
 
-      <Hero />
+      <div className="px-1">
+        <div className="xl:hidden mt-1">
+          <HeaderLinks mediaClasses="flex bg-muted" />
+        </div>
 
-      <Skills />
+        <Hero />
 
-      <WorkExp />
+        <Skills />
 
-      <div className="px-6 py-4 mb-2 shadow-md bg-card" id="interests">
-        <h2 className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8">
-          INTERESTS
-        </h2>
+        <WorkExp />
 
-        <Interests />
+        <Portfolio />
+
+        <Testimonials />
+
+        <ContactMe />
+
+        <MapComponent />
       </div>
-
-      <Portfolio />
-
-      <ContactMe />
-
-      <MapComponent />
     </div>
   );
 };

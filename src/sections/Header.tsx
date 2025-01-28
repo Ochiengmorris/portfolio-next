@@ -1,39 +1,40 @@
 "use client";
 
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const scrollContainer = document.querySelector("#scroll-container");
-    if (!scrollContainer) return;
+    // Select the scrollable container by its ID
+    const container = document.getElementById("scroll-container");
 
     const handleScroll = () => {
-      setIsScrolled(scrollContainer.scrollTop > 10);
+      const scrollTop = container?.scrollTop || 0; // Get scroll position from the container
+      setIsScrolled(scrollTop > 1); // Update state based on scroll position
     };
 
-    scrollContainer.addEventListener("scroll", handleScroll);
+    container?.addEventListener("scroll", handleScroll);
 
     return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
+      container?.removeEventListener("scroll", handleScroll); // Cleanup listener
     };
   }, []);
 
   return (
     <section
-      className={`border-b border-gray-700/40 sticky top-0 z-10 transition-colors duration-150 ${isScrolled ? "bg-card shadow" : ""}`}
+      className={`border-b border-muted/50 w-full ${isScrolled ? "bg-[#050816] shadow" : "bg-transparent"}`}
     >
-      <nav className="py-6 px-5 flex justify-between items-center">
+      <nav className="py-6 px-5 flex text-white/70 justify-between items-center">
         <h2 className="font-pacifico text-xl lg:text-3xl">mjonline.co.ke</h2>
 
         <div>
@@ -50,7 +51,7 @@ const Header = () => {
       </nav>
 
       <Sheet open={showSidebar} onOpenChange={() => setShowSidebar(false)}>
-        <SheetContent>
+        <SheetContent aria-describedby="sidebar">
           <SheetHeader>
             <SheetTitle>My Portfolio</SheetTitle>
           </SheetHeader>

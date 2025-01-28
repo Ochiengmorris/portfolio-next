@@ -4,7 +4,7 @@ import MainComponent from "@/components/MainComponent";
 
 export default function Home() {
   return (
-    <div className="flex justify-center max-w-7xl mx-auto h-screen overflow-y-hidden">
+    <div className="flex justify-center max-w-8xl mx-auto h-screen overflow-y-hidden ">
       <HomeImageHolder />
       <MainComponent />
       <div className="hidden xl:inline-block mt-[84px]">

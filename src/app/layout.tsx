@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { Chakra_Petch, Pacifico } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
+import { Pacifico, Poppins } from "next/font/google";
+import "./globals.css";
 
-const chakraPetch = Chakra_Petch({
-  variable: "--font-chakra-petch",
-  subsets: ["latin", "vietnamese"],
-  weight: ["300", "400", "500", "600", "700"],
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
   display: "swap",
 });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${chakraPetch.variable} ${pacifico.variable} antialiased lg:bg-gray-800/20`}
+        className={`${poppins.variable} ${pacifico.variable} antialiased bg-[#050816]`}
       >
         <Toaster />
         {children}

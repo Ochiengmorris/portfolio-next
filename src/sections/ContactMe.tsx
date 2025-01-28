@@ -1,8 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { ContactForm } from "@/components/Form";
+import { SectionWrapper } from "@/hoc";
+import { textVariant } from "@/utils/motion";
+import { styles } from "@/utils/styles";
+import { motion } from "framer-motion";
 import {
   Facebook,
   Github,
@@ -10,24 +12,15 @@ import {
   Linkedin,
   TwitterIcon,
 } from "lucide-react";
-import React from "react";
 
 const ContactMe = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
-    <section ref={ref} id="contact">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="py-4 mb-2 shadow-md px-6 bg-card"
-      >
-        <h2 className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8">
-          ContactMe
-        </h2>
+    <section>
+      <motion.div className="mb-2 shadow-md p-6 border border-gray-400/50 rounded-xl">
+        <motion.div variants={textVariant({ delay: 0 })}>
+          <p className={styles.sectionSubText}>Get in Touch</p>
+          <h2 className={styles.sectionHeadText}>CONTACT.</h2>
+        </motion.div>
 
         <div className="lg:mx-12">
           <div className="flex list-none gap-8 mb-6">
@@ -69,4 +62,4 @@ const ContactMe = () => {
   );
 };
 
-export default ContactMe;
+export default SectionWrapper({ Component: ContactMe, idName: "contactme" });

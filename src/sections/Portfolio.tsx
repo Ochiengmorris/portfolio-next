@@ -1,112 +1,121 @@
 "use client";
 
+import { projects } from "@/constants/constants";
+import { SectionWrapper } from "@/hoc";
+import { fadeIn, textVariant } from "@/utils/motion";
+import { styles } from "@/utils/styles";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
+import Tilt from "react-parallax-tilt";
 
-const projects = [
-  {
-    id: 1,
-    title: "UmojaTickets - Ticket Marketplace",
-    description:
-      "A cutting-edge event ticketing platform featuring advanced ticket search, filtering, and secure payments with Mpesa. Designed to connect event organizers and attendees seamlessly.",
-    image: "/image1.png",
-    link: "https://mj-ticketr.vercel.app/",
-    techStack: ["Next.js", "Tailwind CSS", "Convex"],
-  },
-  {
-    id: 2,
-    title: "LukuHub - Admin Dashboard",
-    description:
-      "An admin dashboard for managing the LukuHub e-commerce platform. Features include product management, order tracking, and insightful analytics, all wrapped in a sleek, user-friendly interface.",
-    image: "/luku-dash.png",
-    link: "/ecommerce-demo",
-    techStack: ["NextJS", "Tailwind CSS", "Supabase"],
-  },
-  {
-    id: 3,
-    title: "Pesapp - Mobile Money App",
-    description:
-      "A feature-rich mobile money application enabling seamless real-time transactions. Includes secure user authentication, transaction history tracking, and detailed balance management. Built with a modern interface to provide a smooth and intuitive user experience.",
-    image: "/image3.png",
-    link: "/pesapp-demo",
-    techStack: ["React Native", "Node.js", "Expo"],
-  },
-  {
-    id: 4,
-    title: "LukuHub - Shopping App",
-    description:
-      "An intuitive shopping app where users can browse products, add items to their cart, and checkout securely Mpesa. Built for a seamless e-commerce experience. Also has an Admin page for event owners to add, modify, and delete products. Built for a seamless e-commerce experience.",
-    image: "/image4.png",
-    link: "/chat-app-demo",
-    techStack: ["React Native", "Nativewind", "Expo"],
-  },
-];
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+}: {
+  index: number;
+  name: string;
+  description: string;
+  tags: {
+    name: string;
+    color: string;
+  }[];
 
-const Portfolio = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  image: string;
+  source_code_link: string;
+}) => {
   return (
-    <section ref={ref} id="portfolio">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="py-4 mb-2 shadow-md px-6 bg-card"
+    <motion.div
+      variants={fadeIn({
+        direction: "up",
+        type: "spring",
+        delay: index * 0.5,
+        duration: 0.75,
+      })}
+    >
+      <Tilt
+        scale={1}
+        transitionSpeed={450}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <h2 className="lg:text-3xl lg:text-center text-2xl font-semibold mb-8">
-          PROJECTS
-        </h2>
+        <div className="relative w-full h-[230px]">
+          <img
+            src={image}
+            alt="project_image"
+            className="w-full h-full object-cover rounded-2xl"
+          />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              className="bg-white shadow-md rounded-lg overflow-hidden"
-              key={project.id}
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="bg-black-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <div className="relative w-full h-48">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-sm md:text-lg font-semibold">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mt-2 text-xs md:text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.techStack.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 text-xs md:text-sm bg-gray-200 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="inline-block mt-4 text-[#00a184] hover:underline text-xs md:text-sm "
-                >
-                  Live Demo →
-                </a>
-              </div>
+              {/* <img
+                src={github}
+                alt="source code"
+                className="w-1/2 h-1/2 object-contain"
+              /> */}
+              <FaGithub className="w-1/2 h-1/2 object-contain" color="white" />
             </div>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-card/50 text-[14px]">{description}</p>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <p
+              key={`${name}-${tag.name}`}
+              className={`text-[14px] ${tag.color}`}
+            >
+              #{tag.name}
+            </p>
           ))}
         </div>
+      </Tilt>
+    </motion.div>
+  );
+};
+
+const Portfolio = () => {
+  return (
+    <section className="shadow-md p-6 bg-card/5 rounded-xl">
+      <motion.div variants={textVariant({ delay: 0 })}>
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>PROJECTS.</h2>
       </motion.div>
+
+      <div className="w-full flex">
+        <motion.p
+          variants={fadeIn({
+            direction: "right",
+            type: "spring",
+            delay: 0.1,
+            duration: 1,
+          })}
+          className="mt-3 text-[17px] max-w-3xl text-card/50 leading-[30px]"
+        >
+          Following projects showcases my skills and experience through
+          real-world examples of my work. Each project is briefly described with
+          links to code repositories and live demos in it. It reflects my
+          ability to solve complex problems, work with different technologies,
+          and manage projects effectively.
+        </motion.p>
+      </div>
+
+      <div className="mt-20 flex flex-wrap gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default SectionWrapper({ Component: Portfolio, idName: "portfolio" });
