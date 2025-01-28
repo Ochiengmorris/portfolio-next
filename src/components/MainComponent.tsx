@@ -12,7 +12,7 @@ const MainComponent = () => {
   return (
     <div
       className="overflow-y-auto mr-1 relative tracking-wider"
-      style={{ scrollbarWidth: "none" }}
+      style={{ scrollbarWidth: "none", scrollBehavior: "smooth" }}
       id="scroll-container"
     >
       <div className="sticky top-0 z-20">

@@ -55,15 +55,24 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-8"
+      >
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Your Name</FormLabel>
+              <FormLabel className="text-white xl:text-lg font-medium mb-4">
+                Your Name
+              </FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} />
+                <Input
+                  placeholder="What's your name?"
+                  className="bg-tertiary p-6 placeholder:text-white/50 text-white rounded-lg outline-none border-none font-medium"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -74,10 +83,13 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Your Email</FormLabel>
+              <FormLabel className="text-white xl:text-lg font-medium mb-4">
+                Your Email
+              </FormLabel>
               <FormControl>
                 <Input
                   placeholder="example@gmail.com"
+                  className="bg-tertiary p-6 placeholder:text-white/50 text-white rounded-lg outline-none border-none font-medium"
                   {...field}
                   disabled={form.formState.isSubmitting}
                 />
@@ -91,10 +103,13 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Subject</FormLabel>
+              <FormLabel className="text-white xl:text-lg font-medium mb-4">
+                Subject
+              </FormLabel>
               <FormControl>
                 <Input
                   placeholder="Subject..."
+                  className="bg-tertiary p-6 placeholder:text-white/50 text-white rounded-lg outline-none border-none font-medium"
                   {...field}
                   disabled={form.formState.isSubmitting}
                 />
@@ -109,10 +124,15 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Message</FormLabel>
+              <FormLabel
+                className={cn("text-white font-medium xl:text-lg mb-4")}
+              >
+                Message
+              </FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="I need help with..."
+                  className="bg-tertiary py-4 px-6 placeholder:text-white/50 text-white rounded-lg outline-none border-none font-medium"
                   {...field}
                   rows={6}
                   disabled={form.formState.isSubmitting}
@@ -124,9 +144,11 @@ export function ContactForm() {
         />
         <Button
           type="submit"
-          className={cn("font-semibold px-8 py-6 rounded-3xl")}
+          className={cn(
+            "bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+          )}
         >
-          Submit
+          {form.formState.isSubmitting ? "Sending..." : "Send"}
         </Button>
       </form>
     </Form>

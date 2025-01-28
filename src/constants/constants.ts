@@ -1,3 +1,5 @@
+import web from "@/assets/web.png";
+
 export const navLinks = [
   {
     id: "about",
@@ -82,6 +84,7 @@ const experiences = [
     company_name: "Happy Life",
     iconBg: "#383E56",
     date: "July 2024 - December 2024",
+    icon: web,
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers and other developers to create high-quality products.",
