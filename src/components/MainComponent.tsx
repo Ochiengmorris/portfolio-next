@@ -1,7 +1,6 @@
 import ContactMe from "@/sections/ContactMe";
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
-import MapComponent from "@/sections/MapComponent";
 import Portfolio from "@/sections/Portfolio";
 import Skills from "@/sections/Skills";
 import Testimonials from "@/sections/Testimonials";
@@ -36,7 +35,7 @@ const MainComponent = () => {
 
         <ContactMe />
 
-        <MapComponent />
+        {/* <MapComponent /> */}
       </div>
     </div>
   );

@@ -28,6 +28,7 @@
     "react-vertical-timeline-component": "^3.5.3",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.172.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -36,6 +37,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "@types/three": "^0.172.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "postcss": "^8",
