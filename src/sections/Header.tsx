@@ -1,12 +1,9 @@
 "use client";
 
-import HomeImageHolder from "@/components/HomeImageHolder";
-import ImageHolder from "@/components/ImageHolder";
 import SidebarImageHolder from "@/components/SidebarImageHolder";
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
