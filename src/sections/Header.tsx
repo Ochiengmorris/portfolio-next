@@ -1,8 +1,12 @@
 "use client";
 
+import HomeImageHolder from "@/components/HomeImageHolder";
+import ImageHolder from "@/components/ImageHolder";
+import SidebarImageHolder from "@/components/SidebarImageHolder";
 import {
   Sheet,
   SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
@@ -39,7 +43,7 @@ const Header = () => {
 
         <div>
           <ul className="list-none gap-2 font-semibold items-center justify-center lg:text-lg text-base hidden md:flex">
-            <Link href="/" className="hover:underline cursor-pointer">
+            <Link href="/#contactme" className="hover:underline cursor-pointer">
               HIRE ME
             </Link>
           </ul>
@@ -81,6 +85,8 @@ const Header = () => {
                 CONTACT ME
               </a>
             </li>
+
+            <SidebarImageHolder />
           </ul>
         </SheetContent>
       </Sheet>

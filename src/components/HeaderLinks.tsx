@@ -41,7 +41,7 @@ const HeaderLinks = ({ mediaClasses }: { mediaClasses: string }) => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <Link href={"/#portfolio"}>
+        <Link href={"/#work-exp"}>
           <IoBriefcaseOutline size={32} />
         </Link>
       </motion.li>
@@ -50,7 +50,7 @@ const HeaderLinks = ({ mediaClasses }: { mediaClasses: string }) => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <Link href={"/#work-exp"}>
+        <Link href={"/#portfolio"}>
           <BsChatLeftQuote size={32} />
         </Link>
       </motion.li>
@@ -59,7 +59,7 @@ const HeaderLinks = ({ mediaClasses }: { mediaClasses: string }) => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <Link href={"/#interests"}>
+        <Link href={"/#testimonials"}>
           <GiLeafSkeleton size={32} />
         </Link>
       </motion.li>
