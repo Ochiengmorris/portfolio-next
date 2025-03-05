@@ -28,27 +28,27 @@ const ImageHolder = ({ imageClassses }: { imageClassses: string }) => {
 
       <div className="flex list-none text-white justify-center gap-2 lg:gap-6">
         <li>
-          <a href="#">
+          <a href="https://facebook.com" target="_blank">
             <FaSquareFacebook size={24} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://instagram.com" target="_blank">
             <FaInstagramSquare size={24} />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/johnochieng/">
+          <a href="https://www.linkedin.com/in/johnochieng/" target="_blank">
             <FaLinkedin size={24} />
           </a>
         </li>
         <li>
-          <a href="https://x.com/oduyajohn66">
+          <a href="https://x.com/oduyajohn66" target="_blank">
             <FaXTwitter size={24} />
           </a>
         </li>
         <li>
-          <a href="https://github.com/OchiengMorris">
+          <a href="https://github.com/OchiengMorris" target="_blank">
             <FaSquareGithub size={24} />
           </a>
         </li>

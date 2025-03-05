@@ -40,8 +40,8 @@ const Header = () => {
 
         <div>
           <ul className="list-none gap-2 font-semibold items-center justify-center lg:text-lg text-base hidden md:flex">
-            <Link href="/#contactme" className="hover:underline cursor-pointer">
-              HIRE ME
+            <Link href="/#contactme" className="hover:underline hover:underline-offset-4 transition-all ease-in-out duration-300 cursor-pointer">
+              REACH OUT
             </Link>
           </ul>
 

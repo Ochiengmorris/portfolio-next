@@ -50,7 +50,7 @@ export function ContactForm() {
     )}`;
 
     window.location.href = mailtoLink;
-    alert("Complete this process clicking send button to send your message.");
+    confirm("Complete this process clicking send button to send your message.");
   }
 
   return (
