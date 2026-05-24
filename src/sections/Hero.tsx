@@ -19,7 +19,7 @@ const Hero = () => {
       <p className="text-sm md:text-lg text-card/50 lg:text-xl">
         {" "}
         A <b>Full-Stack Web Developer</b> and <b>Statistician</b> with{" "}
-        <b>2+ years</b> of experience in crafting scalable, user-centric
+        <b>3+ years</b> of experience in crafting scalable, user-centric
         solutions. Skilled in <b>Python, JavaScript (React & Node.js)</b>, and{" "}
         <b>React Native</b>, I combine software development expertise with
         statistical analysis to create data-driven, functional, and engaging
