@@ -62,14 +62,14 @@ body {
   }
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
 .language-proficiency {
   display: flex;
@@ -141,4 +141,12 @@ body {
   transition: stroke-dashoffset 0.35s;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* The page background must be flat #E0E5EC everywhere (no gradients). */
+body,
+#scroll-container {
+  background-color: #e0e5ec;
 }

@@ -11,7 +11,7 @@ const SidebarImageHolder = () => {
       transition={{ duration: 0.8 }}
     >
       {/* don't even ask how that width works but it works */}
-      <div className="bg-card shadow-xl flex flex-col justify-center items-center">
+      <div className="bg-card shadow-xl flex flex-col justify-center items-center pb-2">
         <ImageHolder imageClassses={"w-[300px] h-[300px]"} />
 
         <motion.a

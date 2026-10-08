@@ -1,3 +1,10 @@
+import { FaInstagramSquare } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaSquareFacebook,
+  FaSquareGithub,
+  FaXTwitter,
+} from "react-icons/fa6";
 import web from "@/assets/web.png";
 
 export const navLinks = [
@@ -172,3 +179,30 @@ const projects = [
 ];
 
 export { experiences, projects, services, technologies, testimonials };
+
+export const socials = [
+  { label: "Facebook", href: "https://facebook.com", Icon: FaSquareFacebook },
+  {
+    label: "Instagram",
+    href: "https://instagram.com",
+    Icon: FaInstagramSquare,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/johnochieng/",
+    Icon: FaLinkedin,
+  },
+  { label: "X (Twitter)", href: "https://x.com/oduyajohn66", Icon: FaXTwitter },
+  {
+    label: "GitHub",
+    href: "https://github.com/OchiengMorris",
+    Icon: FaSquareGithub,
+  },
+];
+
+export const contactDetails = {
+  email: "oduyajohn66@gmail.com",
+  phone: "+254 742 642356",
+  phoneHref: "tel:+254742642356",
+  location: "Nairobi, Kenya",
+};

@@ -6,6 +6,7 @@ import Skills from "@/sections/Skills";
 import Testimonials from "@/sections/Testimonials";
 import WorkExp from "@/sections/WorkExp";
 import HeaderLinks from "./HeaderLinks";
+import Footer from "@/sections/Footer";
 
 const MainComponent = () => {
   return (
@@ -20,7 +21,7 @@ const MainComponent = () => {
 
       <div className="px-1">
         <div className="xl:hidden mt-1">
-          <HeaderLinks mediaClasses="flex bg-muted" />
+          <HeaderLinks mediaClasses="flex" />
         </div>
 
         <Hero />
@@ -36,6 +37,7 @@ const MainComponent = () => {
         <ContactMe />
 
         {/* <MapComponent /> */}
+        <Footer />
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 "use client";
 
+// import { NeuCard, SectionHeading } from "@/components/ui/neu";
 import { testimonials } from "@/constants/constants";
 import { SectionWrapper } from "@/hoc";
-import { fadeIn, textVariant } from "@/utils/motion";
-import { styles } from "@/utils/styles";
+import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { NeuCard, SectionHeading } from "./Neumo";
 
 const FeedbackCard = ({
   index,
@@ -29,56 +30,56 @@ const FeedbackCard = ({
       delay: index * 0.5,
       duration: 0.75,
     })}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+    className="h-full"
   >
-    <p className="text-white font-black text-[48px]">&quot;</p>
+    <NeuCard as="figure" hoverable className="flex h-full flex-col p-8">
+      {/* Icon well: drilled into the card */}
+      <div
+        aria-hidden
+        className="grid h-14 w-14 place-items-center rounded-2xl bg-neu-bg font-display text-4xl font-extrabold leading-none text-neu-accent shadow-neu-inset-deep"
+      >
+        <span className="translate-y-1">&quot;</span>
+      </div>
 
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+      <blockquote className="mt-6 text-base leading-relaxed text-neu-fg">
+        {testimonial}
+      </blockquote>
 
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+      <figcaption className="mt-auto flex items-center justify-between gap-4 pt-8">
+        <div className="min-w-0">
+          <p className="font-display font-bold tracking-tight text-neu-fg">
+            <span className="text-neu-accent">@</span> {name}
           </p>
-          <p className="mt-1 text-secondary text-[12px]">
+          <p className="mt-1 text-xs text-neu-muted">
             {designation} at {company}
           </p>
         </div>
 
-        <Image
-          src={image}
-          alt={`feedback_by-${name}`}
-          width={40}
-          height={40}
-          className="w-10 h-10 rounded-full object-cover"
-        />
-      </div>
-    </div>
+        <div className="shrink-0 rounded-full p-1 shadow-neu-inset-sm">
+          <Image
+            src={image}
+            alt={`${name}, who left this feedback`}
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-cover"
+          />
+        </div>
+      </figcaption>
+    </NeuCard>
   </motion.div>
 );
 
 const Testimonials = () => {
   return (
-    <section className="py-4 bg-transparent rounded-xl px-6">
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant({ delay: 0 })}>
-          <p className="sm:text-[18px] text-white text-[14px] uppercase tracking-wider">
-            What others say
-          </p>
-          <h2 className="md:text-[60px] text-white sm:text-[50px] xs:text-[40px] text-[30px] mb-8 font-black">
-            Testimonials.
-          </h2>
-        </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+    <NeuCard as="section" className="p-8 md:p-12">
+      <SectionHeading eyebrow="What others say" title="Testimonials." />
+
+      <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>
-    </section>
+    </NeuCard>
   );
 };
 
