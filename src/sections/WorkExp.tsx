@@ -9,8 +9,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-// The package does not ship TypeScript declarations for its CSS entry point.
-// @ts-expect-error CSS side-effect imports are handled by Next.js bundling.
 import "react-vertical-timeline-component/style.min.css";
 
 interface Experience {

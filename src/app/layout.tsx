@@ -1,11 +1,6 @@
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
-import {
-  DM_Sans,
-  Pacifico,
-  Plus_Jakarta_Sans,
-  Poppins,
-} from "next/font/google";
+import { Pacifico, Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
